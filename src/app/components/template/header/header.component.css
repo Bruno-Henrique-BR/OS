@@ -1,0 +1,11 @@
+.header {
+  height: 10%;
+  background-color: rgb(238, 235, 235);
+}
+
+h3 {
+  margin: auto;
+  border: 1px solid rgb(206, 202, 202);
+  padding: .5rem 9rem;
+  border-radius: 2rem;
+}

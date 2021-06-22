@@ -1,0 +1,27 @@
+.container {
+  height: 100vh;
+}
+
+.sidenav {
+  background: var(--azul-pricipal);
+}
+
+img {
+  width: 13rem;
+  height: 7rem;
+  margin: .8rem auto 0 auto;
+}
+
+.sidenav a {
+  color: white;
+}
+
+.sidenav i {
+  margin-right: 1rem;
+}
+
+.menu {
+  margin: 1rem 0 0 1rem;
+  background: var(--azul-pricipal);
+  color: white;
+}

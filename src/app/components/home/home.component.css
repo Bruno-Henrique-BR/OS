@@ -1,0 +1,16 @@
+.card {
+  width: 80%;
+  margin: auto;
+  background-color: rgb(238, 235, 235);
+}
+
+img {
+  height: 17rem;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+  .card {
+    margin-top: 1rem;
+  }
+}

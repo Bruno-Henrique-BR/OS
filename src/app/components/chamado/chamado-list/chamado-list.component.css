@@ -1,0 +1,42 @@
+.create {
+  width: 90%;
+  margin: auto;
+}
+
+.create h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.create button {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+table {
+  width: 100%;
+}
+
+table th, td {
+  text-align: center;
+}
+
+.filter {
+  width: 90%;
+  margin-left: 5%;
+}
+
+#edit {
+  color: rgb(255, 0, 0);
+  opacity: .4;
+}
+
+#view {
+  color: rgb(0, 195, 255);
+  opacity: .4;
+}
