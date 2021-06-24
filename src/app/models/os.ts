@@ -1,4 +1,4 @@
-export interface Chamado {
+export interface Os {
   id?:             any;
   dataAbertura?:   any;
   dataFechamento?: any;

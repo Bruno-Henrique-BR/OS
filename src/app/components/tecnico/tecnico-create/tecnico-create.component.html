@@ -7,7 +7,6 @@
 
     <section class="section">
       <mat-checkbox (click)="addPerfil(0)">Admin</mat-checkbox>
-      <mat-checkbox (click)="addPerfil(1)">Cliente</mat-checkbox>
       <mat-checkbox (click)="addPerfil(2)">Técnico</mat-checkbox>
     </section>
 
@@ -19,7 +18,7 @@
       [formControl]="nome"
       required
       matInput 
-      placeholder="Ex. Valdir Cezar">
+      placeholder="Ex. Joao Batista">
     </mat-form-field>
 
     <mat-form-field class="full-width">

@@ -36,12 +36,12 @@ import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecn
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
-import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
+import { OsCreateComponent } from './components/os/os-create/os-create.component';
 import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
-import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
+import { OsListComponent } from './components/os/os-list/os-list.component';
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
-import { ChamadoEditComponent } from './components/chamado/chamado-edit/chamado-edit.component';
-import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
+import { OsEditComponent } from './components/os/os-edit/os-edit.component';
+import { OsReadComponent } from './components/os/os-read/os-read.component';
 import { HeaderComponent } from './components/template/header/header.component';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { NavComponent } from './components/template/nav/nav.component';
@@ -62,10 +62,10 @@ import { HomeComponent } from './components/home/home.component';
     ClienteCreateComponent,
     ClienteUpdateComponent,
     ClienteDeleteComponent,
-    ChamadoListComponent,
-    ChamadoCreateComponent,
-    ChamadoEditComponent,
-    ChamadoReadComponent,
+    OsListComponent,
+    OsCreateComponent,
+    OsEditComponent,
+    OsReadComponent,
   ],
   imports: [
     BrowserModule,

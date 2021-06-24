@@ -1,31 +1,31 @@
-import { ClienteService } from './../../../services/cliente.service';
-import { TecnicoService } from './../../../services/tecnico.service';
-import { MessageService } from './../../../services/message.service';
-import { ChamadoService } from './../../../services/chamado.service';
-import { Chamado } from './../../../models/chamado';
+import { ClienteService } from '../../../services/cliente.service';
+import { TecnicoService } from '../../../services/tecnico.service';
+import { MessageService } from '../../../services/message.service';
+import { OsService } from '../../../services/os.service';
+import { Os } from './../../../models/os';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
-  selector: 'app-chamado-list',
-  templateUrl: './chamado-list.component.html',
-  styleUrls: ['./chamado-list.component.css']
+  selector: 'app-os-list',
+  templateUrl: './os-list.component.html',
+  styleUrls: ['./os-list.component.css']
 })
-export class ChamadoListComponent implements OnInit {
+export class OsListComponent implements OnInit {
 
-  chamados: Chamado[] = [];
+  oss: Os[] = [];
 
-  chamado: Chamado
+  os: Os
 
   displayedColumns: string[] = ['id', 'titulo', 'cliente', 'dataAbertura', 'prioridade', 'status', 'actions'];
   
-  dataSource = new MatTableDataSource<Chamado>(this.chamados);
+  dataSource = new MatTableDataSource<Os>(this.oss);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor(
-    private service: ChamadoService,
+    private service: OsService,
     private message: MessageService,
   ) { }
 
@@ -36,8 +36,8 @@ export class ChamadoListComponent implements OnInit {
   public findAll(): void {
     this.service.findAll().subscribe(response => {
 
-      this.chamados = response;
-      this.dataSource = new MatTableDataSource<Chamado>(this.chamados);
+      this.oss = response;
+      this.dataSource = new MatTableDataSource<Os>(this.oss);
       this.dataSource.paginator = this.paginator;
     }, err => {
       this.message.message(err.error.error);

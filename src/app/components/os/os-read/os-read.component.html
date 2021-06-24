@@ -1,50 +1,50 @@
 <div class="container mat-elevation-z8">
-  <h1>Visualizando chamado</h1>
+  <h1>Visualizando ordem</h1>
 
   <img class="full-width" src="./assets/img/create-chamado.svg" alt="Help Desk">
 
   <form>
     <mat-form-field class="full-width" appearance="outline">
       <mat-label>Título</mat-label>
-      <input disabled [(ngModel)]="chamado.titulo" name="titulo" matInput>
+      <input disabled [(ngModel)]="os.titulo" name="titulo" matInput>
     </mat-form-field>
   </form>
 
   <div class="priordade-status">
     <mat-form-field class="half-width" appearance="outline">
       <mat-label>PRIORIDADE {{ retornaPrioridade() }}</mat-label>
-      <mat-select disabled [(ngModel)]="chamado.prioridade" class="select">
+      <mat-select disabled [(ngModel)]="os.prioridade" class="select">
       </mat-select>
     </mat-form-field>
 
     <mat-form-field class="half-width" appearance="outline">
       <mat-label>STATUS {{ retornaStatus() }}</mat-label>
-      <mat-select disabled [(ngModel)]="chamado.status" class="select">
+      <mat-select disabled [(ngModel)]="os.status" class="select">
       </mat-select>
     </mat-form-field>
   </div>
 
   <mat-form-field class="full-width" appearance="outline">
-    <mat-label>Cliente: {{ chamado.nomeCliente }}</mat-label>
-    <mat-select disabled [(ngModel)]="chamado.cliente" class="select">
+    <mat-label>Cliente: {{ os.nomeCliente }}</mat-label>
+    <mat-select disabled [(ngModel)]="os.cliente" class="select">
     </mat-select>
   </mat-form-field>
 
   <mat-form-field class="full-width" appearance="outline">
-    <mat-label>Técnico: {{ chamado.nomeTecnico }}</mat-label>
-    <mat-select disabled [(ngModel)]="chamado.tecnico" class="select">
+    <mat-label>Técnico: {{ os.nomeTecnico }}</mat-label>
+    <mat-select disabled [(ngModel)]="os.tecnico" class="select">
     </mat-select>
   </mat-form-field>
 
   <form>
     <mat-form-field class="full-width" appearance="outline">
-      <mat-label>Descrição do chamado</mat-label>
-      <textarea disabled [(ngModel)]="chamado.descricao" name="descricao" class="descricao" matInput></textarea>
+      <mat-label>Descrição da ordem</mat-label>
+      <textarea disabled [(ngModel)]="os.descricao" name="descricao" class="descricao" matInput></textarea>
     </mat-form-field>
   </form>
 
   <button routerLink="../" class="mat-elevation-z2 full-width" mat-stroked-button color="accent">Voltar</button>
 
-  <p class="full-width">Desenvolvido por Valdir Cezar</p>
+  <p class="full-width">OS Line System LTDA</p>
 
 </div>

@@ -1,20 +1,20 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { Chamado } from 'src/app/models/chamado';
+import { Os } from 'src/app/models/os';
 import { Cliente } from 'src/app/models/cliente';
 import { Tecnico } from 'src/app/models/tecnico';
-import { ChamadoService } from 'src/app/services/chamado.service';
+import { OsService } from 'src/app/services/os.service';
 import { ClienteService } from 'src/app/services/cliente.service';
 import { MessageService } from 'src/app/services/message.service';
 import { TecnicoService } from 'src/app/services/tecnico.service';
 
 @Component({
-  selector: 'app-chamado-edit',
-  templateUrl: './chamado-edit.component.html',
-  styleUrls: ['./chamado-edit.component.css']
+  selector: 'app-os-edit',
+  templateUrl: './os-edit.component.html',
+  styleUrls: ['./os-edit.component.css']
 })
-export class ChamadoEditComponent implements OnInit {
+export class OsEditComponent implements OnInit {
 
   clientes: Cliente[] = []
   tecnicos: Tecnico[] = []
@@ -22,7 +22,7 @@ export class ChamadoEditComponent implements OnInit {
   nomeDoTecnico: string = ''
   nomeDoCliente: string = ''
 
-  chamado: Chamado = {
+  os: Os = {
     prioridade:  '',
     status:      '',
     titulo:      '',
@@ -39,7 +39,7 @@ export class ChamadoEditComponent implements OnInit {
   constructor(
     private clienteService: ClienteService,
     private tecnicoService: TecnicoService,
-    private service:        ChamadoService,
+    private service:        OsService,
     private messageService: MessageService,
     private route:          ActivatedRoute,
   ) { }
@@ -51,17 +51,17 @@ export class ChamadoEditComponent implements OnInit {
   }
 
   findById() {
-    this.chamado.id = this.route.snapshot.paramMap.get('id');
-    this.service.findById(this.chamado.id).subscribe(resposta => {
-      this.chamado = resposta;
+    this.os.id = this.route.snapshot.paramMap.get('id');
+    this.service.findById(this.os.id).subscribe(resposta => {
+      this.os = resposta;
     }, err => {
       this.messageService.message(err.error.error);
     })
   }
 
   update() {
-    this.service.update(this.chamado).subscribe(() => {
-      this.messageService.message('Chamado atualizado com sucesso!');
+    this.service.update(this.os).subscribe(() => {
+      this.messageService.message('Ordem atualizada com sucesso!');
     }, err => {
       this.messageService.message(err.error.error);
     })
@@ -91,20 +91,20 @@ export class ChamadoEditComponent implements OnInit {
   }
 
   retornaStatus() {
-    if(this.chamado.status == 0) 
+    if(this.os.status == 0) 
       return 'ABERTO'
 
-    if(this.chamado.status == 1) 
+    if(this.os.status == 1) 
       return 'ANDAMENTO'
 
     return 'ENCERRADO'
   }
 
   retornaPrioridade() {
-    if(this.chamado.prioridade == 0) 
+    if(this.os.prioridade == 0) 
       return 'BAIXA'
     
-    if(this.chamado.prioridade == 1) 
+    if(this.os.prioridade == 1) 
       return 'MÉDIA'
     
     return 'ALTA'

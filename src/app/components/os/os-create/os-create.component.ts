@@ -1,25 +1,25 @@
 import { FormControl, Validators } from '@angular/forms';
-import { MessageService } from './../../../services/message.service';
-import { TecnicoService } from './../../../services/tecnico.service';
-import { ClienteService } from './../../../services/cliente.service';
-import { ChamadoService } from './../../../services/chamado.service';
+import { MessageService } from '../../../services/message.service';
+import { TecnicoService } from '../../../services/tecnico.service';
+import { ClienteService } from '../../../services/cliente.service';
+import { OsService } from '../../../services/os.service';
 import { Component, OnInit } from '@angular/core';
-import { Chamado } from 'src/app/models/chamado';
+import { Os } from 'src/app/models/os';
 import { Cliente } from 'src/app/models/cliente';
 import { Tecnico } from 'src/app/models/tecnico';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-chamado-create',
-  templateUrl: './chamado-create.component.html',
-  styleUrls: ['./chamado-create.component.css']
+  selector: 'app-os-create',
+  templateUrl: './os-create.component.html',
+  styleUrls: ['./os-create.component.css']
 })
-export class ChamadoCreateComponent implements OnInit {
+export class OsCreateComponent implements OnInit {
 
   clientes: Cliente[] = []
   tecnicos: Tecnico[] = []
 
-  chamado: Chamado = {
+  os: Os = {
     prioridade:  '',
     status:      '',
     titulo:      '',
@@ -38,7 +38,7 @@ export class ChamadoCreateComponent implements OnInit {
   cliente:    FormControl = new FormControl(null, [Validators.required])
 
   constructor(
-    private service:        ChamadoService,
+    private service:        OsService,
     private clienteService: ClienteService,
     private tecnicoService: TecnicoService,
     private messageService: MessageService,
@@ -50,8 +50,8 @@ export class ChamadoCreateComponent implements OnInit {
   }
 
   create() {
-    this.service.create(this.chamado).subscribe(() => {
-      this.messageService.message('Chamado registrado com sucesso!');
+    this.service.create(this.os).subscribe(() => {
+      this.messageService.message('Ordem registrada com sucesso!');
     }, err => {
       this.messageService.message(err.error.error);
     })

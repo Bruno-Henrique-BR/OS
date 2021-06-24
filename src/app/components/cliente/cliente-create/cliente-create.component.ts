@@ -37,7 +37,7 @@ export class ClienteCreateComponent implements OnInit {
 
   create() {
     this.service.create(this.cliente).subscribe(response => {
-      this.message.message('Técnico cadastrado com sucesso!!');
+      this.message.message('Cliente cadastrado com sucesso!!');
     }, err => {
       this.message.message(err.error.error);
     })

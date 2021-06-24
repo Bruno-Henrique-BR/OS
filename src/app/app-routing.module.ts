@@ -1,7 +1,7 @@
-import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
-import { ChamadoEditComponent } from './components/chamado/chamado-edit/chamado-edit.component';
-import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
-import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
+import { OsReadComponent } from './components/os/os-read/os-read.component';
+import {  OsEditComponent } from './components/os/os-edit/os-edit.component';
+import { OsCreateComponent } from './components/os/os-create/os-create.component';
+import { OsListComponent } from './components/os/os-list/os-list.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
@@ -33,10 +33,12 @@ const routes: Routes = [
         { path: 'clientes/update/:id', component: ClienteUpdateComponent },
         { path: 'clientes/delete/:id', component: ClienteDeleteComponent },
 
-        { path: 'chamados', component: ChamadoListComponent },
-        { path: 'chamados/create', component: ChamadoCreateComponent },
-        { path: 'chamados/update/:id', component: ChamadoEditComponent },
-        { path: 'chamados/:id', component: ChamadoReadComponent }
+        { path: 'os', component: OsListComponent },
+        { path: 'os/create', component: OsCreateComponent },
+        { path: 'os/update/:id', component: OsEditComponent },
+        { path: 'os/:id', component: OsReadComponent },
+
+      
       ]
   },
   {

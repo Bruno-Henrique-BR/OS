@@ -6,9 +6,7 @@
     <img src="assets/img/tecnico-create.svg" alt="Cliente create">
 
     <section class="section">
-      <mat-checkbox (click)="addPerfil(0)">Admin</mat-checkbox>
       <mat-checkbox (click)="addPerfil(1)">Cliente</mat-checkbox>
-      <mat-checkbox (click)="addPerfil(2)">Técnico</mat-checkbox>
     </section>
 
     <mat-form-field class="full-width">
@@ -19,7 +17,7 @@
       [formControl]="nome"
       required
       matInput 
-      placeholder="Ex. Valdir Cezar">
+      placeholder="Ex. Maria de Lourdes">
     </mat-form-field>
 
     <mat-form-field class="full-width">
